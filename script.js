@@ -2,7 +2,7 @@
   var $ = function (id) { return document.getElementById(id); };
   var NS = 'http://www.w3.org/2000/svg';
 
-  /* ----- Contador desde el 14 de febrero de 2024 ----- */
+  
   var INICIO = new Date(2023, 1, 14, 0, 0, 0);
   var UNIDADES = [
     ['anios', 'año', 'años'], ['meses', 'mes', 'meses'], ['dias', 'día', 'días'],
@@ -48,7 +48,7 @@
   }
   ciclo();
 
-  /* ----- Corazones que suben al llegar a la foto final ----- */
+  
   function corazones() {
     var cont = $('corazones');
     for (var i = 0; i < 16; i++) {
@@ -66,14 +66,12 @@
     }
   }
 
-  /* ----- Corazón hecho con ecuaciones -----
-     x(t) = 16 sin^3 t
-     y(t) = 13 cos t - 5 cos 2t - 2 cos 3t - cos 4t        0 <= t <= 2*pi          */
+  
   var plano = $('plano'), firma = $('firma');
   var contorno = $('contorno'), relleno = $('relleno'), anidados = $('anidados');
   var lapiz = $('lapiz'), tVal = $('t-val'), rutaTexto = $('ruta-texto'), tp = $('tp'), ejesG = $('ejes');
 
-  var S = 10.5, CX = 200, CY = 205, OY = -2.55, N = 480;   /* escala, centro del dibujo y punto medio del corazón */
+  var S = 10.5, CX = 200, CY = 205, OY = -2.55, N = 480;  
 
   function el(nombre, attrs, texto) {
     var e = document.createElementNS(NS, nombre);
@@ -130,7 +128,7 @@
     });
   }
 
-  /* Las ecuaciones se repiten rodeando el corazón, repartidas para llenar el contorno */
+  
   var UNIDAD = 'x = 16 sin³ t · y = 13 cos t − 5 cos 2t − 2 cos 3t − cos 4t · 0 ≤ t ≤ 2π · ';
   function ajustarTexto() {
     try {
@@ -187,7 +185,7 @@
   construir();
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(ajustarTexto);
 
-  /* ----- Revelado suave al deslizar ----- */
+  
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   var animado = 'IntersectionObserver' in window && !reduce;
 
@@ -204,7 +202,7 @@
     }, { threshold: 0.16, rootMargin: '0px 0px -6% 0px' });
     document.querySelectorAll('[data-rev="t"]:not([data-espera]), [data-rev="m"]').forEach(function (e) { io.observe(e); });
 
-    /* El corazón empieza a dibujarse cuando se llega al final de la página */
+    
     var ioFinal = new IntersectionObserver(function (entradas) {
       entradas.forEach(function (en) {
         if (en.isIntersecting) { iniciar(); ioFinal.disconnect(); }
