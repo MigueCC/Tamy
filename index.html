@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mi vida hermosa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;600&family=La+Belle+Aurore&family=STIX+Two+Text:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <path id="hoja" d="M0 0C4-13 20-22 38-19C37-3 21 8 0 0Z"/>
+    <symbol id="rama" viewBox="0 0 120 270">
+      <path d="M60 266C57 200 67 120 60 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <use href="#hoja" transform="translate(59 236) rotate(-18)"/>
+      <use href="#hoja" transform="translate(59 214) scale(-1 1) rotate(-22)"/>
+      <use href="#hoja" transform="translate(61 186) rotate(-24)"/>
+      <use href="#hoja" transform="translate(62 160) scale(-1 1) rotate(-26)"/>
+      <use href="#hoja" transform="translate(63 132) rotate(-28) scale(.9)"/>
+      <use href="#hoja" transform="translate(62 106) scale(-1 1) rotate(-30) scale(.9)"/>
+      <use href="#hoja" transform="translate(61 80) rotate(-34) scale(.78)"/>
+      <use href="#hoja" transform="translate(60 56) scale(-1 1) rotate(-36) scale(.7)"/>
+      <use href="#hoja" transform="translate(60 30) rotate(-55) scale(.62)"/>
+      <use href="#hoja" transform="translate(60 18) rotate(-95) scale(.55)"/>
+    </symbol>
+    <symbol id="corazon" viewBox="0 0 24 24">
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!--
+  FOTOS: guarda tus 5 fotos en una carpeta llamada "fotos" con estos nombres:
+  foto1.jpg, foto2.jpg, foto3.jpg, foto4.jpg, foto5.jpg
+  Si una foto no existe, se muestra un espacio verde en su lugar.
+-->
+
+<!-- PORTADA -->
+<header class="hero">
+  <div class="rama a" aria-hidden="true"><svg viewBox="0 0 120 270"><use href="#rama"/></svg></div>
+  <div class="rama b" aria-hidden="true"><svg viewBox="0 0 120 270"><use href="#rama"/></svg></div>
+  <div class="in">
+    <div class="titulo">
+      <h1 data-rev="t">
+        <span>Feliz</span>
+        <span>cumpleaños</span>
+        <span class="mano">mi vida hermosa</span>
+      </h1>
+      <div class="baja" data-rev="t" style="--d:.9s" aria-hidden="true"><i></i><span>desliza</span></div>
+    </div>
+    <div class="marco" data-rev="m">
+      <figure class="arco">
+        <div class="foto">
+          <div class="hueco" aria-hidden="true"><svg viewBox="0 0 120 270"><use href="#rama"/></svg><span>Foto 1</span></div>
+          <img src="fotos/foto1.jpeg" alt="Foto 1" onerror="this.remove()">
+        </div>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<!-- TE AMO MUCHO -->
+<section class="paso">
+  <div class="rama" aria-hidden="true"><svg viewBox="0 0 120 270"><use href="#rama"/></svg></div>
+  <div class="in">
+    <div class="marco" data-rev="m">
+      <figure class="arco">
+        <div class="foto">
+          <div class="hueco" aria-hidden="true"><svg viewBox="0 0 120 270"><use href="#rama"/></svg><span>Foto 2</span></div>
+          <img src="fotos/foto2.jpeg" alt="Foto 2" onerror="this.remove()">
+        </div>
+      </figure>
+    </div>
+    <h2 class="msg" data-rev="t" style="--d:.3s">Te amo <span class="mano">mucho</span></h2>
+  </div>
+</section>
+
+<!-- TE EXTRAÑO MUCHO SIEMPRE -->
+<section class="paso inv">
+  <div class="rama" aria-hidden="true"><svg viewBox="0 0 120 270"><use href="#rama"/></svg></div>
+  <div class="in">
+    <div class="marco" data-rev="m">
+      <figure class="arco">
+        <div class="foto">
+          <div class="hueco" aria-hidden="true"><svg viewBox="0 0 120 270"><use href="#rama"/></svg><span>Foto 3</span></div>
+          <img src="fotos/foto3.jpeg" alt="Foto 3" onerror="this.remove()">
+        </div>
+      </figure>
+    </div>
+    <h2 class="msg" data-rev="t" style="--d:.3s">Te extraño mucho <span class="mano">siempre</span></h2>
+  </div>
+</section>
+
+<!-- CONTADOR -->
+<section class="banda" id="contador">
+  <div class="rama a" aria-hidden="true"><svg viewBox="0 0 120 270"><use href="#rama"/></svg></div>
+  <div class="rama b" aria-hidden="true"><svg viewBox="0 0 120 270"><use href="#rama"/></svg></div>
+  <div class="in">
+    <p class="desde" data-rev="t">Desde el 14 de febrero de 2024</p>
+    <div class="reloj" role="timer" aria-label="Tiempo transcurrido desde el 14 de febrero de 2024" data-rev="t" style="--d:.2s">
+      <div class="u"><span class="n" id="n-anios">–</span><span class="e" id="e-anios">años</span></div>
+      <div class="u"><span class="n" id="n-meses">–</span><span class="e" id="e-meses">meses</span></div>
+      <div class="u"><span class="n" id="n-dias">–</span><span class="e" id="e-dias">días</span></div>
+      <div class="u"><span class="n" id="n-horas">–</span><span class="e" id="e-horas">horas</span></div>
+      <div class="u"><span class="n" id="n-minutos">–</span><span class="e" id="e-minutos">minutos</span></div>
+      <div class="u"><span class="n" id="n-segundos">–</span><span class="e" id="e-segundos">segundos</span></div>
+    </div>
+    <p class="total" data-rev="t" style="--d:.4s"><span id="total">–</span> días en total</p>
+  </div>
+</section>
+
+<!-- ORGULLO -->
+<section class="paso">
+  <div class="rama" aria-hidden="true"><svg viewBox="0 0 120 270"><use href="#rama"/></svg></div>
+  <div class="in">
+    <div class="marco" data-rev="m">
+      <figure class="arco">
+        <div class="foto">
+          <div class="hueco" aria-hidden="true"><svg viewBox="0 0 120 270"><use href="#rama"/></svg><span>Foto 4</span></div>
+          <img src="fotos/foto4.jpeg" alt="Foto 4" onerror="this.remove()">
+        </div>
+      </figure>
+    </div>
+    <h2 class="msg" data-rev="t" style="--d:.3s"><span class="mano">Estoy</span> orgulloso <span class="mano">de ti</span></h2>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final">
+  <div class="corazones" id="corazones" aria-hidden="true"></div>
+  <div class="rama a" aria-hidden="true"><svg viewBox="0 0 120 270"><use href="#rama"/></svg></div>
+  <div class="rama b" aria-hidden="true"><svg viewBox="0 0 120 270"><use href="#rama"/></svg></div>
+  <div class="in">
+    <div class="marco" data-rev="m" data-lanza="1">
+      <figure class="arco">
+        <div class="foto">
+          <div class="hueco" aria-hidden="true"><svg viewBox="0 0 120 270"><use href="#rama"/></svg><span>Foto 5</span></div>
+          <img src="fotos/foto5.jpeg" alt="Foto 5" onerror="this.remove()">
+        </div>
+      </figure>
+    </div>
+    <h2 class="msg" data-rev="t" style="--d:.3s"><span class="mano">Felices</span> <span class="n23">23</span> <span class="anios">años</span> <span class="mano">Tamy</span></h2>
+  </div>
+</section>
+
+<!-- CIERRE: CORAZÓN HECHO CON ECUACIONES Y FIRMA -->
+<section class="cierre">
+  <div class="in">
+    <div class="plano" id="plano" data-rev="p">
+      <svg viewBox="0 0 400 400" role="img" aria-label="Un corazón trazado con las ecuaciones x(t) = 16 sen³ t y y(t) = 13 cos t − 5 cos 2t − 2 cos 3t − cos 4t">
+        <defs>
+          <path id="ruta-texto" fill="none"/>
+        </defs>
+        <g class="ejes" id="ejes"></g>
+        <g class="latido">
+          <path class="relleno" id="relleno"/>
+          <g id="anidados"></g>
+          <path class="contorno" id="contorno"/>
+        </g>
+        <text class="eq-texto" aria-hidden="true"><textPath href="#ruta-texto" id="tp"></textPath></text>
+        <circle class="lapiz" id="lapiz" r="4.5" cx="200" cy="178"/>
+      </svg>
+      <div class="ecuaciones">
+        <p class="eq-linea" style="--d:.2s"><i>x</i>(<i>t</i>) = 16 sin³ <i>t</i></p>
+        <p class="eq-linea" style="--d:.5s"><i>y</i>(<i>t</i>) = 13 cos <i>t</i> − 5 cos 2<i>t</i> − 2 cos 3<i>t</i> − cos 4<i>t</i></p>
+        <p class="eq-linea" style="--d:.8s">0 ≤ <i>t</i> ≤ 2π &nbsp;·&nbsp; <i>t</i> = <span class="t-val" id="t-val">0.00</span></p>
+      </div>
+    </div>
+
+    <div class="firma" id="firma" data-rev="t" data-espera="1">
+      <span class="mano">Con mucho amor</span>
+      <span class="nombre">Migue</span>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
