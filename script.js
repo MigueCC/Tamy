@@ -3,7 +3,7 @@
   var NS = 'http://www.w3.org/2000/svg';
 
   /* ----- Contador desde el 14 de febrero de 2024 ----- */
-  var INICIO = new Date(2024, 1, 14, 0, 0, 0);
+  var INICIO = new Date(2023, 1, 14, 0, 0, 0);
   var UNIDADES = [
     ['anios', 'año', 'años'], ['meses', 'mes', 'meses'], ['dias', 'día', 'días'],
     ['horas', 'hora', 'horas'], ['minutos', 'minuto', 'minutos'], ['segundos', 'segundo', 'segundos']
